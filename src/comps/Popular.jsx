@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Splide, SplideSlide } from "@splidejs/splide";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 
 function Popular() {
@@ -20,26 +20,23 @@ function Popular() {
 
   return (
     <div>
-      {popular.map((recipe) => {
-        return (
-          <Wrapper>
-            <h3>Popular pics</h3>
+      <Wrapper>
+        <h3>Popular pics</h3>
 
-            <Splide>
-              {popular.map((recipe) => {
-                return (
-                  <SplideSlide>
-                    <Card>
-                      <p>{recipe.title}</p>
-                      <img src={recipe.image} alt="" />
-                    </Card>
-                  </SplideSlide>
-                );
-              })}
-            </Splide>
-          </Wrapper>
-        );
-      })}
+        <Splide>
+          {popular.map((recipe) => {
+            return (
+              <SplideSlide>
+                <Card>
+                  <p>{recipe.title}</p>
+                  <img src={recipe.image} alt="" />
+                </Card>
+              </SplideSlide>
+            );
+          })}
+        </Splide>
+      </Wrapper>
+      ;
     </div>
   );
 }
