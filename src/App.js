@@ -1,9 +1,10 @@
 import Pages from "./pages/Pages";
+import Category from "./comps/Category";
 
 function App() {
   return (
     <div className="App">
-      <h1>yooo</h1>
+      <Category></Category>
       <Pages></Pages>
     </div>
   );
