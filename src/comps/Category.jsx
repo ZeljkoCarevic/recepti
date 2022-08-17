@@ -10,7 +10,7 @@ function Category() {
   return (
     <List>
       <NavLink to={"/cousine/Italian"}>
-        <FaPizzaSlice></FaPizzaSlice>
+        <FaPizzaSlice />
         <h4>Italian</h4>
       </NavLink>
       <NavLink to={"/cousine/American"}>
@@ -35,6 +35,28 @@ const List = styled.div`
   justify-content: center;
   margin: 2rem 0rem;
   gap: 2rem;
+`;
+
+const SLink = styled(NavLink)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 2rem;
+  cursor: pointer;
+  transform: scale(0.8);
+  h4 {
+    color: white;
+    font-site: 1rem;
+  }
+  svg {
+    color: white;
+    font-size: 1.5rem;
+  }
+  &.active {
+    background: blue;
+  }
 `;
 
 export default Category;
