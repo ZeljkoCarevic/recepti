@@ -1,0 +1,8 @@
+version: '1.1'
+services:
+  recipe:
+    build: .
+    container_name: recipe_c
+    ports:
+      - 3000:3000
+    
